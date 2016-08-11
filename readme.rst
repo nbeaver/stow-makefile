@@ -30,9 +30,10 @@ the output will looks like this::
     All operations aborted.
 
 Just overwrite the empty ``.vimrc`` with the real one
-if you want to keep it in stow.
+if you want to keep it in stow::
 
-#. ``mv ~/.vimrc ./vim-config/.vimrc``
+    mv ~/.vimrc ./vim-config/.vimrc
+    make
 
 ----------------------------------------------------
 Use with existing stow directory rooted at ``$HOME``

@@ -41,12 +41,12 @@ Use with existing stow directory rooted at ``$HOME``
 #. Copy or symlink `<Makefile>`_ to stow directory.
 #. ``make``
 
--------------------------------------
-Change the location of stow directory
--------------------------------------
+---------------------------------
+Change location of stow directory
+---------------------------------
 
 #. ``cd`` to stow directory.
 #. ``make delete``
-#. Move the stow directory.
-#. ``cd`` to stow directory again.
+#. Move the stow directory to new location.
+#. ``cd`` to new location of stow directory.
 #. ``make``

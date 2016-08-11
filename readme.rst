@@ -8,16 +8,15 @@ Use with a new stow directory rooted at ``$HOME``
 
 #. Make a new stow directory::
 
-    mkdir ~/stow-files
-
-#. Copy or symlink `<Makefile>`_ to stow directory::
-
-    wget https://raw.githubusercontent.com/nbeaver/stow-makefile/master/Makefile
-    cp ./Makefile ~/stow-files/
+    mkdir ~/stow-packages
 
 #. Enter the stow directory::
 
-    cd ~/stow-files/
+    cd ~/stow-packages/
+
+#. Get `<Makefile>`_ into stow directory::
+
+    wget https://raw.githubusercontent.com/nbeaver/stow-makefile/master/Makefile
 
 #. Make a package directory, e.g. ``vim-config``::
 
@@ -35,7 +34,12 @@ If ``~/.vimrc`` does not exist yet,
 the output will looks like this::
 
     stow --target /home/username --verbose vim-config/
-    LINK: .vimrc => stow-files/vim-config/.vimrc
+    LINK: .vimrc => stow-packages/vim-config/.vimrc
+
+You can check that ``stow`` was successful::
+
+    $ file ~/.vimrc
+    /home/username/.vimrc: symbolic link to stow-packages/vim-config/.vimrc
 
 If ``~/.vimrc`` already exists,
 the output will looks like this::
@@ -45,8 +49,8 @@ the output will looks like this::
       * existing target is neither a link nor a directory: .vimrc
     All operations aborted.
 
-Just overwrite the empty ``.vimrc`` with the real one
-if you want to keep it in stow::
+In that case, if you want to keep ``.vimrc`` in stow,
+overwrite the empty ``.vimrc`` with the real one::
 
     mv ~/.vimrc ./vim-config/.vimrc
     make

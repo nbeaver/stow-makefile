@@ -4,6 +4,7 @@ To use with a new stow directory rooted at ``$HOME``:
 #. ``cd`` to stow directory.
 #. Copy or symlink `<Makefile>`_ to stow directory.
 #. Add stow directories. For example, for the ``.stowrc``:
+
    #. ``mkdir stow``
    #. ``touch stow/.stowrc``
    #. ``make``

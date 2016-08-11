@@ -12,7 +12,7 @@ Use with a new stow directory rooted at ``$HOME``
 
 #. Copy or symlink `<Makefile>`_ to stow directory::
 
-    wget https://github.com/nbeaver/stow-makefile/blob/master/Makefile
+    wget https://raw.githubusercontent.com/nbeaver/stow-makefile/master/Makefile
     cp ./Makefile ~/stow-files/
 
 #. Enter the stow directory::

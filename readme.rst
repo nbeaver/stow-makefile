@@ -1,13 +1,27 @@
 To use with a new stow directory rooted at ``$HOME``:
 
-#. Make a stow directory.
-#. ``cd`` to stow directory.
+#. Make a stow directory, e.g. ``~/stow-files/``.
+#. ``cd ~/stow-files/``
 #. Copy or symlink `<Makefile>`_ to stow directory.
-#. Add stow directories. For example, for the ``.stowrc``:
+#. Add stow directories. For example, for a ``.vimrc``:
 
-   #. ``mkdir stow``
-   #. ``touch stow/.stowrc``
-   #. ``make``
+   #. ``mkdir vim-config`` (do this in the stow directory)
+   #. ``touch vim-config/.vimrc`` (make a blank ``vimrc`` file)
+   #. ``make`` (symlink ``vim-config/.vimrc`` to ``~/.vimrc``)
+
+If ``~/.vimrc`` does not exist yet,
+the output will looks like this::
+
+    stow --target /home/username --verbose vim-config/
+    LINK: .vimrc => stow-files/vim-config/.vimrc
+
+If ``~/.vimrc`` already exists,
+the output will looks like this::
+
+    stow --target /home/username --verbose vim-config/
+    WARNING! stowing vim-config would cause conflicts:
+      * existing target is neither a link nor a directory: .vimrc
+    All operations aborted.
 
 To use with existing stow directory rooted at ``$HOME``:
 

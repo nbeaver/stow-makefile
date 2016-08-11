@@ -6,14 +6,30 @@ Makefile for using GNU stow more conveniently
 Use with a new stow directory rooted at ``$HOME``
 -------------------------------------------------
 
-#. Make a stow directory, e.g. ``~/stow-files/``.
-#. ``cd ~/stow-files/``
-#. Copy or symlink `<Makefile>`_ to stow directory.
-#. Add stow directories. For example, for a ``.vimrc``:
+#. Make a new stow directory::
 
-   #. ``mkdir vim-config`` (do this in the stow directory)
-   #. ``touch vim-config/.vimrc`` (make a blank ``vimrc`` file)
-   #. ``make`` (symlink ``vim-config/.vimrc`` to ``~/.vimrc``)
+    mkdir ~/stow-files
+
+#. Copy or symlink `<Makefile>`_ to stow directory::
+
+    wget https://github.com/nbeaver/stow-makefile/blob/master/Makefile
+    cp Makefile ~/stow-files/
+
+#. Enter the stow directory::
+
+    cd ~/stow-files/
+
+#. Make a package directory, e.g. ``vim-config``::
+
+    mkdir vim-config
+
+#. Add a package file, e.g. an empty ``.vimrc``::
+
+    touch vim-config/.vimrc
+
+#. Run make to symlink ``vim-config/.vimrc`` to ``~/.vimrc``::
+
+    make
 
 If ``~/.vimrc`` does not exist yet,
 the output will looks like this::

@@ -1,4 +1,10 @@
-To use with a new stow directory rooted at ``$HOME``:
+=============================================
+Makefile for using GNU stow more conveniently
+=============================================
+
+-------------------------------------------------
+Use with a new stow directory rooted at ``$HOME``
+-------------------------------------------------
 
 #. Make a stow directory, e.g. ``~/stow-files/``.
 #. ``cd ~/stow-files/``
@@ -23,23 +29,28 @@ the output will looks like this::
       * existing target is neither a link nor a directory: .vimrc
     All operations aborted.
 
-To use with existing stow directory rooted at ``$HOME``:
+----------------------------------------------------
+Use with existing stow directory rooted at ``$HOME``
+----------------------------------------------------
 
-#. Copy or symlink Makefile to stow directory.
+#. Copy or symlink `<Makefile>`_ to stow directory.
 #. ``make``
 
-To add a stow directory for ``bash``:
+---------------------------------
+Add a stow directory for ``bash``
+---------------------------------
 
 #. ``cd`` to stow directory.
 #. ``mkdir bash``
 #. ``mv ~/.bashrc ./bash/``
 #. ``make``
 
-To change the location of stow directory:
+-------------------------------------
+Change the location of stow directory
+-------------------------------------
 
 #. ``cd`` to stow directory.
 #. ``make delete``
 #. Move the stow directory.
 #. ``cd`` to stow directory again.
 #. ``make``
-

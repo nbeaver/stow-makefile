@@ -13,7 +13,7 @@ Use with a new stow directory rooted at ``$HOME``
 #. Copy or symlink `<Makefile>`_ to stow directory::
 
     wget https://github.com/nbeaver/stow-makefile/blob/master/Makefile
-    cp Makefile ~/stow-files/
+    cp ./Makefile ~/stow-files/
 
 #. Enter the stow directory::
 
@@ -27,7 +27,7 @@ Use with a new stow directory rooted at ``$HOME``
 
     touch vim-config/.vimrc
 
-#. Run make to symlink ``vim-config/.vimrc`` to ``~/.vimrc``::
+#. Run ``make`` to symlink ``vim-config/.vimrc`` to ``~/.vimrc``::
 
     make
 

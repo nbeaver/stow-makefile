@@ -29,20 +29,16 @@ the output will looks like this::
       * existing target is neither a link nor a directory: .vimrc
     All operations aborted.
 
+Just overwrite the empty ``.vimrc`` with the real one
+if you want to keep it in stow.
+
+#. ``mv ~/.vimrc ./vim-config/.vimrc``
+
 ----------------------------------------------------
 Use with existing stow directory rooted at ``$HOME``
 ----------------------------------------------------
 
 #. Copy or symlink `<Makefile>`_ to stow directory.
-#. ``make``
-
----------------------------------
-Add a stow directory for ``bash``
----------------------------------
-
-#. ``cd`` to stow directory.
-#. ``mkdir bash``
-#. ``mv ~/.bashrc ./bash/``
 #. ``make``
 
 -------------------------------------

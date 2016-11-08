@@ -33,7 +33,7 @@ Use with a new stow directory rooted at ``$HOME``
 If ``~/.vimrc`` does not exist yet,
 the output will looks like this::
 
-    stow --target /home/username --verbose vim-config/
+    $ stow --target /home/username --verbose vim-config/
     LINK: .vimrc => stow-packages/vim-config/.vimrc
 
 You can check that ``stow`` was successful::
@@ -44,7 +44,7 @@ You can check that ``stow`` was successful::
 If ``~/.vimrc`` already exists,
 the output will looks like this::
 
-    stow --target /home/username --verbose vim-config/
+    $ stow --target /home/username --verbose vim-config/
     WARNING! stowing vim-config would cause conflicts:
       * existing target is neither a link nor a directory: .vimrc
     All operations aborted.

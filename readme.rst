@@ -49,11 +49,17 @@ the output will looks like this::
       * existing target is neither a link nor a directory: .vimrc
     All operations aborted.
 
-In that case, if you want to keep ``.vimrc`` in stow,
-overwrite the empty ``.vimrc`` with the real one::
+In that case, if you want to keep the existing ``.vimrc``,
+overwrite the empty ``.vimrc`` existing one and then stow it::
 
-    mv ~/.vimrc ./vim-config/.vimrc
-    make
+    $ mv ~/.vimrc ./vim-config/.vimrc
+    $ make
+
+Otherwise, remove the existing one
+and stow the empty one::
+
+    $ rm ~/.vimrc
+    $ make
 
 ----------------------------------------------------
 Use with existing stow directory rooted at ``$HOME``

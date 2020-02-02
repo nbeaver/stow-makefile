@@ -3,6 +3,12 @@ stow_dirs = $(wildcard */)
 stow :
 	stow --target $(HOME) --verbose $(stow_dirs)
 
+.PHONY : stow-verbose
+# verbosity goes from 0 to 4
+VERBOSITY=1
+stow-verbose :
+	stow --verbose $(VERBOSITY) --target $(HOME) --verbose $(stow_dirs)
+
 .PHONY : dry-run
 dry-run :
 	stow --no --target $(HOME) --verbose $(stow_dirs)

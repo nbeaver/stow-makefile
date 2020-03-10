@@ -16,7 +16,7 @@ Use with a new stow directory rooted at ``$HOME``
 
 #. Get `<Makefile>`_ into stow directory::
 
-    wget https://raw.githubusercontent.com/nbeaver/stow-makefile/master/Makefile
+    wget 'https://raw.githubusercontent.com/nbeaver/stow-makefile/master/Makefile'
 
 #. Make a package directory, e.g. ``vim-config``::
 
